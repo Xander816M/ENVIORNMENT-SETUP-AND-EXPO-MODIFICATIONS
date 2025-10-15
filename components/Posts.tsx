@@ -2,9 +2,11 @@ import { StyleSheet, Text, View} from 'react-native'
 import React from 'react'
 
 function Posts() {
-    <View>
+    return(
+     <View>
         
-    </View>
+     </View>   
+    )
 }
 
 export default Posts
