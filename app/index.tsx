@@ -1,5 +1,5 @@
+import { Text, View } from "react-native";
 import Posts from "@/components/Posts";
-import { View } from "react-native";
 
 export default function Index() {
   return (
