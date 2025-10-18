@@ -41,12 +41,11 @@ const Posts = () => {
                     }}
                     style={styles.profileImage}
                     />
-                    <Image source={{uri: "https://upload.wikimedia.org/wikipedia/commons/0/09/X_%28formerly_Twitter%29_logo_late_2025.svg",}}
+                    <Image source={require('../assets/images/Twitter_logo_late_2025.png')}
                     style={styles.logo}/>
-                    <Image source={{uri: "https://upload.wikimedia.org/wikipedia/commons/8/80/Codicons_%E2%80%93_settings-gear.svg",}}
+                    <Image source={require('../assets/images/Codicons_–_settings-gear.png')}
                     style={styles.settings}/>
                 </View>
-
                 <View style={styles.navigationBar}>
                     <TouchableOpacity onPress={() => setPageSelected(false)} style={pageSelected === false&& {borderBottomColor: 'rgba(90, 143, 249, 1)', borderBottomWidth: 3, borderBottomLeftRadius: 2, borderBottomRightRadius: 2, borderTopLeftRadius:3}}> 
                         <Text style={[styles.tab,pageSelected === true&& {color:'rgba(100, 100, 101, 1)'}]}>For you</Text>
@@ -153,7 +152,7 @@ const styles = StyleSheet.create({
     heading:{
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 25,
+        marginTop: 35,
         padding: 15,
         paddingBottom: 30
     },
