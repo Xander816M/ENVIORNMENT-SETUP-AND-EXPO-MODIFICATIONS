@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity, Alert, Platform } from 'react-native'
 import React, {useState} from 'react'
+
 
 // style={styles.container}
 const Posts = () => {
@@ -97,8 +98,13 @@ const styles = StyleSheet.create({
     },
 
     bottomBar: {
+        ...Platform.select({
+            android: {bottom:-870},
+            web: {bottom:-575},
+            ios: {bottom:-870}
+        }),
+
         position: "absolute",
-        bottom:-870,
         left: 0,
         right: 0,
         height:70,
@@ -117,18 +123,27 @@ const styles = StyleSheet.create({
     },
 
     bottomButton:{
-        width:40,
-        height:40,
+        ...Platform.select({
+            web: {width:30, height:30},
+            android: {width:40, height:40},
+            ios: {width:40, height:40}
+        }),
+
         aspectRatio:"1/1"
     },
 
     alertButton:{
+        ...Platform.select({
+            web: {width:65},
+            android: {width:60},
+            ios: {width:60}
+        }),
         height:40,
         borderWidth:2,
         justifyContent:"space-around",
         borderRadius:10,
         padding:8,
-        width:60
+        
     },
 
     alertText:{
