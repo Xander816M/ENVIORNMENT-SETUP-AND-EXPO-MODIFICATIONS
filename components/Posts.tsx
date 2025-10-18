@@ -8,9 +8,27 @@ const Posts = () => {
         Alert.alert("Home Button", "You tapped the Home icon!");
     };
 
+    const handleSearchPress = () => {
+        Alert.alert("Search Button", "You tapped the Search icon!");
+    };
+
+    const handleGrokPress = () => {
+        Alert.alert("Grok Button", "You tapped the Grok icon!");
+    };
+
+    const handleNotificationsPress = () => {
+        Alert.alert("Notifications Button", "You tapped the Notifications icon!");
+    };
+
+    const handleInboxPress = () => {
+        Alert.alert("Inbox Button", "You tapped the Inbox icon!");
+    };
+
     const handleAlertPress = () => {
-        Alert.alert("Alert button pressed.")
+        Alert.alert("Alert Button", "Alert button pressed.")
     }
+
+
     return (
         <View style={styles.container}>
             <View style={styles.bottomBar}>
@@ -20,22 +38,22 @@ const Posts = () => {
                     <Image source={require("../assets/images/home.png")} style={styles.bottomButton} />
                 </TouchableOpacity>
 
-                <Image
-                    source={require("../assets/images/search.png")}
-                    style={styles.bottomButton}
-                />
-                <Image
-                    source={require("../assets/images/grok.png")}
-                    style={styles.bottomButton}
-                />
-                <Image
-                    source={require("../assets/images/notifications.png")}
-                    style={styles.bottomButton}
-                />
-                <Image
-                    source={require("../assets/images/inbox.png")}
-                    style={styles.bottomButton}
-                />
+                <TouchableOpacity onPress={handleSearchPress}>
+                    <Image source={require("../assets/images/search.png")} style={styles.bottomButton} />
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={handleGrokPress}>
+                    <Image source={require("../assets/images/grok.png")} style={styles.bottomButton} />
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={handleNotificationsPress}>
+                    <Image source={require("../assets/images/notifications.png")} style={styles.bottomButton} />
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={handleInboxPress}>
+                    <Image source={require("../assets/images/inbox.png")} style={styles.bottomButton} />
+                </TouchableOpacity>
+
                 <TouchableOpacity style={styles.alertButton} onPress={handleAlertPress}>
                     <Text style={styles.alertText}>Alert</Text>
                 </TouchableOpacity>
