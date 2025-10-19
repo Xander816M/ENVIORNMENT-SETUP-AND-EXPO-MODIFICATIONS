@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
   },
   bottomBar: {
     ...Platform.select({
-      android: { bottom: -210 },
+      android: { bottom: -870 },
       web: { bottom: -575 },
       ios: { bottom: -870 },
     }),
