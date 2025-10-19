@@ -1,3 +1,4 @@
+
 import { StyleSheet, Text, View, Image, TouchableOpacity, Alert, Platform } from 'react-native'
 import React, {useState} from 'react'
 
@@ -47,6 +48,23 @@ const Posts = () => {
                     <Image source={require('../assets/images/Codicons_–_settings-gear.png')}
                     style={styles.settings}/>
                 </View>
+              <View style ={styles.post}>
+   <View style= {styles.postAndText}>
+    <Image
+        source={require("../assets/images/Profile.jpg")}
+        style={styles.profile}
+    />
+    <Text style={styles.text}>
+      Lorem ipsum dolor sit amet consectetur adipiscing elit.
+      Sit amet consectetur adipiscing elit quisque faucibus ex. 
+      Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
+    </Text>              
+
+       <Image
+        source={require("../assets/images/Photo.jpg")}
+        style={styles.image}
+        />    
+  </View>
                 <View style={styles.navigationBar}>
                     <TouchableOpacity onPress={() => setPageSelected(false)} style={pageSelected === false&& {borderBottomColor: 'rgba(90, 143, 249, 1)', borderBottomWidth: 3, borderBottomLeftRadius: 2, borderBottomRightRadius: 2, borderTopLeftRadius:3}}> 
                         <Text style={[styles.tab,pageSelected === true&& {color:'rgba(100, 100, 101, 1)'}]}>For you</Text>
@@ -85,8 +103,8 @@ const Posts = () => {
                         <Text style={styles.alertText}>Alert</Text>
                     </TouchableOpacity>
                 </View>
-            </View> 
-        </View>
+     </View> 
+    
     )
 
 }
@@ -96,6 +114,35 @@ const styles = StyleSheet.create({
     container: {
         flex:1
     },
+      post: {
+    flex: 1,
+    padding: 10,
+    margin: 10,
+    justifyContent: "flex-start",
+  },
+    postAndText: {
+    flexDirection: "row",
+    alignItems: "center", 
+    },
+    profile:{
+      width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginTop: 40,
+    
+  },
+
+  image: {  
+    width: "100%", 
+    height:500, 
+    borderRadius: 20,
+    marginTop : 60,
+    
+  },
+  text: {
+    fontSize: 18, 
+    flexShrink: 1,
+  },
 
     bottomBar: {
         ...Platform.select({
@@ -183,3 +230,4 @@ const styles = StyleSheet.create({
         paddingRight:57
     }
 })
+
